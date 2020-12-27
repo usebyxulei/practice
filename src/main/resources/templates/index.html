@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/layui/layui.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<style>
+    .search_form{
+        width:602px;
+        height:42px;
+    }
+
+    /*左边输入框设置样式*/
+    .input_text{
+        width:400px;
+        height: 40px;
+        border:1px solid green;
+        padding:0px;
+        text-indent: 10px;
+        outline: none;
+        float:left;
+        border-radius: 3px;
+    }
+
+    .input_sub{
+        width:100px;
+        height: 42px;
+        background: green;
+        border:0px;
+        float:left;
+        color:white;
+        cursor:pointer;
+    }
+</style>
+<body style="">
+    <div style="margin-left: 30%;margin-top:13%">
+        <h1 style="margin-left: 60px;margin-bottom: 5px;">中文知识图谱问答系统</h1>
+        <form class="search_form">
+            <input type="text" class="input_text" placeholder="请输入搜索内容">
+            <input type="button" value="搜索" class="input_sub" id="search" >
+        </form>
+        <div style="margin-left: 18%;color: chocolate;font-weight: bold;">热门问题：</div>
+        <div style="margin-left: 16%;color: chocolate;">中国首都在哪里？</div>
+
+        <div id="answer" style="background-color: #9F9F9F;width: 52%;height: 200px;border-radius: 5px;display: none">
+            <div style="margin: 10px 0px 10px 5px;">问句:</div>
+            <div style="margin: 10px 0px 10px 5px;">电子科技大学校长是谁?</div>
+            <div style="margin: 10px 0px 10px 5px;">答案:</div>
+            <div style="margin: 10px 0px 10px 5px;">xxx</div>
+        </div>
+        <div style="margin-top: 12%;margin-left: 20%;">北京科技大学</div>
+    </div>
+</body>
+</html>
+<script>
+   window.onload = function () {
+        document.getElementById("search").onclick = function () {
+            document.getElementById("answer").style.display = "block"
+        }
+    }
+
+</script>

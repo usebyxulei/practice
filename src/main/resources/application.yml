@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    prefix: classpath:templates/
+  mvc:
+    view:
+      suffix: .html
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+  rabbitmq:
+    addresses: 192.168.110.130
+    port: 5672
+    username: ems
+    password: 123
+    virtual-host: /ems
+logging:
+  level:
+    com.example.ant.practice.mapper : debug
+#mybatis:
+#  mapper-locations: classpath*:mapper/practice/*.xml
+#  type-aliases-package: com.example.ant.practice.entity
+
